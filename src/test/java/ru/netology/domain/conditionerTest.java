@@ -9,18 +9,21 @@ class conditionerTest {
     public void shouldCreate() {
         conditioner conditioner = new conditioner();
     }
+
     @Test
     public void shouldIncreaseCurrentTemperature() {
         conditioner conditioner = new conditioner();
         conditioner.increaseCurrentTemperature();
         assertEquals(21, conditioner.getCurrentTemperature());
     }
+
     @Test
     public void shouldDecreaseCurrentTemperature() {
         conditioner conditioner = new conditioner();
         conditioner.decreaseCurrentTemperature();
         assertEquals(19, conditioner.getCurrentTemperature());
     }
+
     @Test
     public void shouldSetterLogic() {
         conditioner conditioner = new conditioner();
