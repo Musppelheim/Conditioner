@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class conditioner {
+public class Conditioner {
     private String name;
     private int maxTemperature = 35;
     private int minTemperature = 17;
@@ -8,11 +8,11 @@ public class conditioner {
     boolean on;
 
     public void increaseCurrentTemperature() {
-            currentTemperature += 1;
+        currentTemperature += 1;
     }
 
     public void decreaseCurrentTemperature() {
-            currentTemperature -= 1;
+        currentTemperature -= 1;
     }
 
     public int getCurrentTemperature() {
