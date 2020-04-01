@@ -15,8 +15,16 @@ class RadioTest {
     @Test
     void shouldSwitchStationByManuallyWithWrongNumber() {
         Radio radio = new Radio();
-        radio.switchStationByManually(15);
-        assertEquals(7, radio.getCurrentRadioStation());
+        radio.switchStationByManually(0);
+        assertEquals(7, radio.switchStationByManually(0));
+    }
+
+
+    @Test
+    void shouldSwitchNextStation() {
+        Radio radio = new Radio();
+        radio.pressNextStation();
+        assertEquals(8, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -25,13 +33,6 @@ class RadioTest {
         radio.setCurrentRadioStation(9);
         radio.pressNextStation();
         assertEquals(0, radio.getCurrentRadioStation());
-    }
-
-    @Test
-    void shouldSwitchNextStation() {
-        Radio radio = new Radio();
-        radio.pressNextStation();
-        assertEquals(8, radio.getCurrentRadioStation());
     }
 
     @Test

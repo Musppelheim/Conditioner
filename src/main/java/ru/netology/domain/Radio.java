@@ -11,7 +11,7 @@ public class Radio {
     private final static int MAX_RADIO_STATION = 9;
 
     public int switchStationByManually(int inputStation) {
-        if (inputStation <= 9 && inputStation >= 0) {
+        if (inputStation < 9 && inputStation > 0) {
             currentRadioStation = inputStation;
         }
         return currentRadioStation;
