@@ -19,6 +19,19 @@ class RadioTest {
         assertEquals(7, radio.switchStationByManually(0));
     }
 
+    @Test
+    void shouldSwitchStationByManuallyIfUnderMinimum() {
+        Radio radio = new Radio();
+        radio.switchStationByManually(-1);
+        assertEquals(7, radio.switchStationByManually(-1));
+    }
+
+    @Test
+    void shouldSwitchStationByManuallyIfOverMaximum() {
+        Radio radio = new Radio();
+        radio.switchStationByManually(10);
+        assertEquals(7, radio.switchStationByManually(10));
+    }
 
     @Test
     void shouldSwitchNextStation() {
